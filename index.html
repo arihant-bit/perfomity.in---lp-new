@@ -62,6 +62,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdro
 .logo span{color:var(--blue)}
 .nav .btn{padding:11px 20px;font-size:14.5px}
 
+/* ---------- Trust bar ---------- */
+.trustbar{background:#fff;border-bottom:1px solid var(--line);padding:10px 0}
+.trustbar-inner{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap}
+.trustbar img{height:44px;width:auto}
+.trustbar-text{font-size:14.5px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px}
+.trustbar .stars{color:#F59E0B;font-size:16px;letter-spacing:2px}
+@media(max-width:720px){.trustbar img{height:34px}.trustbar-text{font-size:13px}}
+
 /* ---------- Hero ---------- */
 .hero{padding:60px 0 52px;text-align:center}
 .hero h1{font-size:clamp(30px,5vw,50px);font-weight:700;line-height:1.12;max-width:900px;margin:0 auto 18px}
@@ -261,6 +269,14 @@ footer a{color:#8B98A5;text-decoration:none;margin-left:18px}
     <a class="btn btn-primary" href="#apply">Apply For Growth Audit</a>
   </div>
 </header>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trustbar">
+  <div class="wrap trustbar-inner">
+    <img src="https://perfomitymedia.com/wp-content/uploads/2026/05/logos-1.png" alt="Client brand logos" loading="eager">
+    <div class="trustbar-text"><span class="stars">★★★★★</span> Trusted by 100+ Brands Across India</div>
+  </div>
+</div>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
