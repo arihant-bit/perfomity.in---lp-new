@@ -89,8 +89,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdro
 .logos{padding:38px 0;background:var(--paper)}
 .logos p{text-align:center;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
 .marquee{overflow:hidden;position:relative}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.marquee::before{left:0;background:linear-gradient(90deg,var(--paper),transparent)}
+.marquee::after{right:0;background:linear-gradient(270deg,var(--paper),transparent)}
 .marquee-track{display:flex;gap:48px;align-items:center;width:max-content;animation:scroll 38s linear infinite}
-.marquee-track img{height:50px;width:auto;filter:grayscale(1);opacity:.75}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track img{height:50px;width:auto;filter:grayscale(1);opacity:.75;transition:filter .25s ease,opacity .25s ease,transform .25s ease;cursor:pointer}
+.marquee-track img:hover{filter:grayscale(0);opacity:1;transform:translateY(-4px) scale(1.08)}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}}
 
